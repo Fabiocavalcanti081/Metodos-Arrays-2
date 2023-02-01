@@ -1,17 +1,10 @@
 const palavras = ["livro", "caneta", "sol", "carro", "orelha"];
+const palavraMaiorOito = palavras.some((palavras) => {
+    return palavras.length > 5;
+});
 
-function verificarPalavras(palavras) {
-    let arrayValidado = true;
-    for (const palavra of palavras) {
-        if (palavra.length > 5) {
-            console.log("existe palavra inválida");
-            arrayValidado = false;
-            break;
-        }
-    }
-    if (arrayValidado) {
-        console.log("array validado");
-    }
+if (palavraMaiorOito) {
+    console.log("existe palavra inválida");
+} else {
+    console.log("array validado");
 }
-
-verificarPalavras(palavras);
